@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import os
 import numpy as np
 from matplotlib.colors import ListedColormap
+import logging 
 
 def prepare_data(df, target_col="y"):
     X = df.drop(target_col, axis=1)
