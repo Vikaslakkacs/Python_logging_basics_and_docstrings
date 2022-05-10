@@ -6,6 +6,15 @@ from matplotlib.colors import ListedColormap
 import logging 
 
 def prepare_data(df, target_col="y"):
+    """It returs label and independent feature(s)
+
+    Args:
+        df (pd.DataFrame): This is a dataframe
+        target_col (str, optional): Label column name. Defaults to "y".
+
+    Returns:
+        Tuple: Returns input features and independent output feature
+    """
     logging.info("Preparing data for training")
     X = df.drop(target_col, axis=1)
     
